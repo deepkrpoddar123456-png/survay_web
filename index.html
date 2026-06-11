@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorized Secure Submission Panel</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-banner">
+            <h2>Verification Dashboard</h2>
+            <p class="subtitle">Please provide your authorized credentials to submit records.</p>
+        </div>
+
+        <div id="statusBox" class="status-box"></div>
+
+        <form id="submissionForm">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            
+            <input type="hidden" name="from_name" value="Secure Web Portal">
+            <input type="hidden" name="subject" value="New Verified Form Entry">
+
+            <div class="form-group">
+                <label for="username">Authorized System Name</label>
+                <input type="text" id="username" name="Authorized Name" placeholder="e.g., Rahul Sharma" required>
+            </div>
+
+            <div class="form-group">
+                <label for="field1">Data Point One</label>
+                <input type="text" id="field1" name="Data Field 1" placeholder="Enter primary detail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="field2">Data Point Two</label>
+                <input type="text" id="field2" name="Data Field 2" placeholder="Enter secondary detail" required>
+            </div>
+
+            <button type="submit" id="submitBtn">Submit Records</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
